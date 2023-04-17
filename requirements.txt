@@ -2,7 +2,4 @@ joblib==1.2.0
 matplotlib==3.5.3
 opencv_python==4.7.0.72
 keras==2.11.0
-tensorflow==2.11.0
---global-option="build_ext"
---global-option="--copt=-march=native"
---global-option="--cxxopt=-D_GLIBCXX_USE_CXX11_ABI=0"
+tensorflow==2.11.0 --global-option="build_ext" --global-option="--copt=-march=native"s --global-option="--cxxopt=-D_GLIBCXX_USE_CXX11_ABI=0"

@@ -19,7 +19,12 @@ app.post('/', async (req, res) => {
         else resolve();
       });
     });
-    const pythonProcess = spawn('python', ['./index.py']);
+    const pythonProcess = spawn('python', ['./index.py'], {
+        env: {
+            PYTHONPATH: process.env.PYTHONPATH,
+            pythonPath: '/path/to/python/executable',
+        }
+    });
     const output = await new Promise((resolve, reject) => {
       let data = '';
       pythonProcess.stdout.on('data', (chunk) => {

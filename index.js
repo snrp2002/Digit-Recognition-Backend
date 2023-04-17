@@ -21,7 +21,7 @@ app.post('/', async (req, res)=>{
             res.status(200).json({output: data.toString()});
         });
         pythonProcess.stderr.on('data', (data) => {
-            throw new Error(data);
+            throw new Error(data.toString());
         });
     }catch(err){
         res.status(400).json({message: err.message});

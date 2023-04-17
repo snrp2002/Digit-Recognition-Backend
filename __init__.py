@@ -1,6 +1,8 @@
 import matplotlib.image as mpimg
 import joblib
 import cv2
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 try:
     loaded_model = joblib.load("model.pkl")
     image = mpimg.imread('image.jpg')
